@@ -1,0 +1,5 @@
+body.bg-dark{
+    background-image: url('imagens/background.jpg')!important;
+    background-repeat: no-repeat!important;
+    background-size: 100%!important;
+}
