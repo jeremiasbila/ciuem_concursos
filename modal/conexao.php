@@ -1,5 +1,5 @@
 <?php
 
-$link = mysqli_connect("localhost", "root", "#password#", "concursos");
+$link = mysqli_connect("localhost", "root", "", "concursos");
 
 ?> 
