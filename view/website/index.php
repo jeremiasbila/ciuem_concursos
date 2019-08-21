@@ -1,5 +1,11 @@
 <?php include "../estrutura/website/header.php" ?>
 <?php include "../estrutura/website/navbar.php" ?>
+<?php include "../../modal/conexao.php" ?>
+
+<?php 
+    $sql = "SELECT * FROM concurso ORDER BY concurso_id DESC LIMIT 5" ;
+    $results = mysqli_query($link,$sql);
+?>
 
     <header>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -88,82 +94,27 @@
                 <div id="content">
                     <h3 class="heading">Mais Recentes</h3>
                     <hr class="my-4">
-                    <div class="card" style="margin-bottom:5px;">
+                    <div class="card py-3" >
                         <div class="card-body">
                         <div class="row">
-                            <div class="col-lg-2">
-                            <img src="../../imagens/test3-1.png" alt="..." style="width:130px;height:100px;margin-left:0;">
+                            <?php while($dados = mysqli_fetch_array($results)){ ?>
+                                <div class="col-lg-2">
+                                    <img src="../../imagens/test3-1.png" alt="..." style="width:130px;height:100px;margin-left:0;">
+                                </div>
+                                <div class="col-lg-10">
+                                    <h4><?php echo $dados["referencia"];?></h4>
+                                    <p><?php echo $dados["descricao"];?></p>
+                                    <button type="button" class="btn btn-outline-warning btn-sm">Ver mais</button>
+                                    <hr> 
+                                </div>
+                            <?php }?>  
+             
                             </div>
-                            <div class="col-lg-10">
-                                <h4>Material de escritorio (UEM)</h4>
-                                <p>Um escritório é um local que se destina à realização de um trabalho (geralmente, intelectual
-                                ou administrativo). Trata-se de um espaço físico podendo estar organizado de distintas 
-                                formas e apresentar diversas características.</p>
-                                <button type="button" class="btn btn-outline-warning btn-sm">Ver mais</button>
-                            </div>
-                        </div>
                         </div>
                     </div>
-                    <div class="card" style="margin-bottom:5px;">
-                        <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-2">
-                            <img src="../../imagens/test3-2.jpg" alt="..." style="width:130px;height:100px;margin-left:0;">
-                            </div>
-                            <div class="col-lg-10">
-                                <h4>Computadores e Impressoras (UEM)</h4>
-                                <p>O computador é uma máquina que processa informações eletronicamente, 
-                                    na forma de dados e pode ser programado para as mais diversas tarefas.</p>
-                                <button type="button" class="btn btn-outline-warning btn-sm">Ver mais</button>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="card" style="margin-bottom:5px;">
-                        <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-2">
-                            <img src="../../imagens/test3-3.jpg" alt="..." style="width:130px;height:100px;margin-left:0;">
-                            </div>
-                            <div class="col-lg-10">
-                                <h4>Switchs e Routers (INAGE)</h4>
-                                <p>um dispositivo que encaminha pacotes de dados entre redes de computadores, 
-                                    criando um conjunto de redes de sobreposição. Um roteador é conectado a duas ou mais linhas de dados de redes diferentes.</p>
-                                <button type="button" class="btn btn-outline-warning btn-sm">Ver mais</button>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="card" style="margin-bottom:5px;">
-                        <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-2">
-                            <img src="../../imagens/test3-4.jpg" alt="..." style="width:130px;height:100px;margin-left:0;">
-                            </div>
-                            <div class="col-lg-10">
-                                <h4>&Aacutegua (CIUEM)</h4>
-                                <p>proveniente de fontes naturais ou de fontes artificialmente captadas que possua composição química ou 
-                                    propriedades físicas ou físico-químicas distintas das águas comuns, com características que lhe confira uma ação medicamentosa</p>
-                                <button type="button" class="btn btn-outline-warning btn-sm">Ver mais</button>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="card" style="margin-bottom:5px;">
-                        <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-2">
-                            <img src="../../imagens/test3-5.jpg" alt="..." style="width:130px;height:100px;margin-left:0;">
-                            </div>
-                            <div class="col-lg-10">
-                                <h4>Servi&ccedilo de internet (CIUEM)</h4>
-                                <p>um sistema global de redes de computadores interligadas que utilizam um conjunto próprio de protocolos 
-                                    (Internet Protocol Suite ou TCP/IP) com o propósito de servir progressivamente usuários no mundo inteiro.</p>
-                                <button type="button" class="btn btn-outline-warning btn-sm">Ver mais</button>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
+                   
+                    
+                    
                     <nav aria-label="paginacao">
                         <ul class="pagination justify-content-end">
                             <li class="page-item disabled">
