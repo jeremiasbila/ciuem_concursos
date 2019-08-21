@@ -95,7 +95,7 @@
                     <h3 class="heading">Mais Recentes</h3>
                     <hr class="my-4">
                     <?php while($dados = mysqli_fetch_array($results)){ ?>
-                        <div class="card" style="margin-bottom:5px">
+                        <div class="card mais_recents_cartao" style="margin-bottom:5px">
                             <div class="card-body">
                             <div class="row">
 
@@ -104,6 +104,7 @@
                                     </div>
                                     <div class="col-lg-10">
                                         <h4><?php echo $dados["referencia"];?></h4>
+                                        <hr>
                                         <p><?php echo $dados["descricao"];?></p>
                                         <button type="button" class="btn btn-outline-warning btn-sm">Ver mais</button>
                                     </div>
