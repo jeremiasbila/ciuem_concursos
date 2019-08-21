@@ -94,7 +94,7 @@
                 <div id="content">
                     <h3 class="heading">Mais Recentes</h3>
                     <hr class="my-4">
-                    <div class="card py-3" >
+                    <div class="card" style="margin-bottom:5px">
                         <div class="card-body">
                         <div class="row">
                             <?php while($dados = mysqli_fetch_array($results)){ ?>
@@ -115,7 +115,7 @@
                    
                     
                     
-                    <nav aria-label="paginacao">
+                    <!-- <nav aria-label="paginacao">
                         <ul class="pagination justify-content-end">
                             <li class="page-item disabled">
                             <span class="page-link">Anterior</span>
@@ -131,7 +131,7 @@
                             <a class="page-link" href="#">Pr&oacuteximo</a>
                             </li>
                         </ul>
-                    </nav>
+                    </nav> -->
                 </div>
             </div>
         </div>
