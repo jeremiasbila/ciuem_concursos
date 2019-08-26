@@ -1,4 +1,3 @@
-
 <html lang="en"> 
 
 <head>
@@ -70,14 +69,9 @@
     <div class="card card-register mx-auto mt-5">
       <div class="card-header" style="font-size:20px!important;">Registo</div>
       <div class="card-body">
-<<<<<<< HEAD
+
         <form action="../admin/registar_fornecedores.php" method="POST">
-=======
-	   
-		
-        <form action="../../controller/registar.php" method="post" method="POST">
->>>>>>> 9d7cd6d8f79c98cc90af50beb64055a3b93e5a84
-          <div class="form-group">
+        <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
                 <div class="form-label-group">
