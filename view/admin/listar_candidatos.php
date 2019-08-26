@@ -1,8 +1,5 @@
 <?php include "../estrutura/admin/header.php" ?>
 <?php include "../estrutura/admin/sidebar.php" ?>
-
-
-
 <?php 
 include "../../modal/conexao.php" ;
 $sql = "SELECT * FROM candidatura INNER JOIN concurso ON candidatura.idConcursos = concurso.concurso_id INNER JOIN fornecedor ON candidatura.idFornecedores = fornecedor.idFornecedor";

@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php 
+	session_start();
+	if(isset($_SESSION['Logado'])){
+		header("location:../../view/admin/index.php");
+	}
+?>
+
 <html lang="en">
 
 <head>
@@ -25,21 +31,59 @@
 <body class="bg-dark" style="background-image: url('../../imagens/background.jpg')!important;
     background-repeat: no-repeat!important;
     background-size: 100%!important;">
+    <nav class="navbar navbar-expand fixed-top">
+    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+    <i class="fas fa-bars"></i>
+    </button>
+      <a class="navbar-brand mr-1" href="../../view/website/">Concursos</a>
+
+    <!-- Navbar -->
+    <ul class="navbar-nav ml-auto ml-md-50">
+
+
+    <!-- <li class="nav-item dropdown no-arrow">
+        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-user-circle fa-fw"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+        <a class="dropdown-item" href="#">Perfil</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Sair</a>
+        </div>
+    </li> -->
+    <?php 
+            if(isset($_SESSION['Logado'])){
+                echo ''. $_SESSION['Logado'].'<br/>';?>
+        <li>
+            <a href="../../controller/logout.php?Logout"><button type="button" class="btn btn-outline-warning">Entrar</button></a>
+            
+        </li>
+        
+    <?php } else { ?>
+
+        <li>
+           
+            <a href="../autenticacao/registar.php"><button type="button" class="btn btn-outline-warning">Cadastre-se</button></a>
+        </li>
+
+    <?php } ?>
+    </ul>
+    </nav>
 
   <div class="container">
     <div class="card card-login mx-auto mt-5">
-      <div class="card-header" style="font-size:20px!important;">Iniciar sess&atildeo</div>
+      <div class="card-header" style="font-size:20px!important;">Iniciar sess&atildeo </div>
       <div class="card-body">
-        <form>
+        <form  action="../../controller/autenticacao.php" method="post">
           <div class="form-group">
             <div class="form-label-group">
-              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
-              <label for="inputEmail">Email</label>
+              <input type="text" name="nome" id="nome" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
+              <label for="inputEmail">Nome</label>
             </div>
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
+              <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required="required">
               <label for="inputPassword">Senha</label>
             </div>
           </div>
@@ -51,7 +95,7 @@
               </label>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="website/index2.php" style="color:white!important;">Entrar</a>
+                    <button class="btn btn-success" name="Login" id="Login">Entrar</button>
         </form>
         <div class="text-center">
           <a class="d-block small mt-3" href="registar.php" style="color:#EECE00!important;">Criar conta</a>
@@ -64,9 +108,15 @@
   <!-- Bootstrap core JavaScript-->
   <script src="../../vendor/jquery/jquery.min.js"></script>
   <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+   <style type="text/css">
+     .container{
+          padding-top: 40px;
+     }
+   </style>
   <!-- Core plugin JavaScript-->
   <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+ 	
 
 </body>
 </html>
+

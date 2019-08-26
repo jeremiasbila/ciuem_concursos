@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Concurso {
     concurso_id: int #Primary_key
     modalidade: varchar (60)
@@ -32,4 +33,40 @@ Candidatura {
     idCandidatura: int #Primary_key
     idConcurso: int #Foreign_key
     idFornecedor: int #Foreign_key
+=======
+Concurso {
+    concurso_id: int #Primary_key
+    modalidade: varchar (60)
+    referencia: varchar (60)
+    designacao: varchar (60)
+    aquisicao: varchar (60)
+    dataInicio: date
+    dataFim: date
+    descricao: varchar (120)
+    previsto: char (1) default "0"
+    aberto: char (1) default "1"
+    ficheiro: blob
+}
+
+Fornecedor {
+    idFornecedor: int #Primary_key
+    nrCadastro: varchar (20)
+    nome: varchar (60)
+    email: varchar (60)
+    senha: varchar (120)
+    nacionalidade: varchar (60)
+    tipoCorrente: varchar (60)
+    provincia: varchar (60)
+    distrito: varchar (60)
+    distrito: varchar (60)
+    endereco: varchar (60)
+    contacto: int (20)
+    nuit: int (20)
+}
+
+Candidatura {
+    idCandidatura: int #Primary_key
+    idConcurso: int #Foreign_key
+    idFornecedor: int #Foreign_key
+>>>>>>> 1f31bbc6384647667e98b2ce76cb5869212a37f9
 }

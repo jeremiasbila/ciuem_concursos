@@ -18,4 +18,7 @@
 
       <!-- Custom styles for this template-->
       <link href="../../css/sb-admin.css" rel="stylesheet">
+      <?php 
+        echo '<a href="../../controller/logout.php?Logout" >Sair</a>';
+      ?>
 </head>
