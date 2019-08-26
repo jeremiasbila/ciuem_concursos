@@ -27,7 +27,7 @@
     $string_sql = "INSERT INTO `fornecedor`(`idFornecedor`, `nrCadastro`, `nome`, `email`, `senha`, `nacionalidade`, `tipoCorrente`, `provincia`, `distrito`, `endereco`, `contacto`, `nuit`) VALUES (null,'".$nrCadastro."','".$nome."','".$email."','".$senha."','".$nacionalidade."','".$tipoCorrente."','".$provincia."','".$distrito."','".$endereco."','".$contacto."','".$nuit."')";
      
     if ($conn->query($string_sql) === TRUE) {
-        header("Location:cadastrar_concursos.php");
+        header("Location:../autenticacao/login.php");
     } else {
         echo "Error: " . $string_sql . "<br>" . $conn->error;
     }

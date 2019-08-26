@@ -30,7 +30,7 @@
     <div class="card card-register mx-auto mt-5">
       <div class="card-header" style="font-size:20px!important;">Registo</div>
       <div class="card-body">
-        <form action="login.php" method="POST">
+        <form action="../admin/registar_fornecedores.php" method="POST">
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
