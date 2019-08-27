@@ -562,6 +562,13 @@ pre code {
   margin-left: auto;
 }
 
+.login_name{
+      color: beige;
+    margin-bottom: -14px;
+    font-size: 17px;
+    font-family: inherit;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;

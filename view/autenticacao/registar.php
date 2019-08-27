@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<html lang="en"> 
 
 <head>
 
@@ -25,12 +25,53 @@
 <body class="bg-dark" style="background-image: url('../../imagens/background.jpg')!important;
     background-repeat: no-repeat!important;
     background-size: 100%!important;">
+     <nav class="navbar navbar-expand fixed-top">
+    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+    <i class="fas fa-bars"></i>
+    </button>
+    <a class="navbar-brand mr-1" href="../../view/website/">Concursos</a>
+
+    <!-- Navbar -->
+    <ul class="navbar-nav ml-auto ml-md-50">
+
+
+    <!-- <li class="nav-item dropdown no-arrow">
+        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-user-circle fa-fw"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+        <a class="dropdown-item" href="#">Perfil</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Sair</a>
+        </div>
+    </li> -->
+    <?php 
+            if(isset($_SESSION['Logado'])){
+                echo ''. $_SESSION['Logado'].'<br/>';?>
+        <li>
+            <a href="../../controller/logout.php?Logout"><button type="button" class="btn btn-outline-warning">Entrar</button></a>
+            
+        </li>
+        
+    <?php } else { ?>
+
+        <li>
+           
+            <a href="  ../autenticacao/login.php"><button type="button" class="btn btn-outline-warning">Entrar</button></a>
+        </li>
+
+    <?php } ?>
+    </ul>
+    </nav>
+
 
   <div class="container">
     <div class="card card-register mx-auto mt-5">
       <div class="card-header" style="font-size:20px!important;">Registo</div>
       <div class="card-body">
-        <form action="login.php" method="POST">
+	   
+		
+        <form action="../../controller/registar.php" method="post" method="POST">
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
@@ -49,7 +90,7 @@
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required="required">
+              <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" required="required">
               <label for="inputEmail">Email</label>
             </div>
           </div>
@@ -72,14 +113,14 @@
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
-              <select class="custom-select" name="nacionalidade">
+              <select id="nacionalidade" class="custom-select" name="nacionalidade">
                   <option selected>Nacionalidade</option>
                   <option value="Mocambicana">Mocambicana</option>
                   <option value="Estrangeira">Estrangeira</option>
                 </select>
               </div>
               <div class="col-md-6">
-                <select class="custom-select" name="tipoCorrente">
+                <select id="tipoCorrente" class="custom-select" name="tipoCorrente">
                   <option selected>Tipo de corrente</option>
                   <option value="Singular">Singular</option>
                   <option value="Empresa">Empresa</option>
@@ -91,14 +132,14 @@
             <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
-              <select class="custom-select" name="provincia">
+              <select id="provincia" class="custom-select" name="provincia">
                   <option selected>Provincia</option>
                   <option value="Maputo">Maputo</option>
                   <option value="Gaza">Gaza</option>
                 </select>
               </div>
               <div class="col-md-6">
-                <select class="custom-select" name="distrito">
+                <select id="distrito" class="custom-select" name="distrito">
                   <option selected>Distrito</option>
                   <option value="Kamaxaquene">Kamaxaquene</option>
                 </select>

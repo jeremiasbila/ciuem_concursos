@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php 
+	session_start();
+?>
 <html lang="en">
 <head>
       <meta charset="utf-8">
@@ -38,6 +40,13 @@
           <button class="btn btn-primary" type="button" id="btnPesquisar">
             <i class="fas fa-search"></i>
           </button>
+		  <div> 
+      <?php 
+			if(isset($_SESSION['Logado'])){
+				echo 'Bem Vindo ao sistema '. $_SESSION['Logado'].'<br/>';
+		
+			}
+			?></div>
         </div>
       </div>
     </form>
@@ -60,8 +69,10 @@
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
           <a class="dropdown-item" href="#">Perfil</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="../autenticacao/login.php" data-toggle="modal" data-target="#logoutModal">Sair</a>
+          <a class="dropdown-item" href="../../controller/logout.php?Logout" data-toggle="modal" data-target="#logoutModal">Sair</a>
         </div>
       </li>
+	  
+	 
     </ul>
   </nav>
