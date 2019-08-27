@@ -4,7 +4,6 @@
 <body class="site">
     <nav class="navbar navbar-expand fixed-top">
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
-    <i class="fas fa-bars"></i>
     </button>
     <a class="navbar-brand mr-1" href="http://localhost/concursos/view/website">Concursos</a>
 
@@ -26,7 +25,7 @@
             if(isset($_SESSION['Logado'])){
                 echo ''. $_SESSION['Logado'].'<br/>';?>
         <li>
-            <a href="../../controller/logout.php?Logout"><button type="button" class="btn btn-outline-warning btn-2">Sair</button></a>
+            <a href="../../controller/logout.php?Logout"><button type="button" class="btn btn-link btn-2">(Sair)</button></a>
             
         </li>
         
