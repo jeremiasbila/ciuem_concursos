@@ -65,7 +65,8 @@
     </nav>
 
 
-  <div class="container">
+  <div class="container" style="
+    padding-top: 18px;">
     <div class="card card-register mx-auto mt-5">
       <div class="card-header" style="font-size:20px!important;">Registo</div>
       <div class="card-body">

@@ -1,5 +1,5 @@
-<?php include "../estrutura/header.php" ?>
-<?php include "../estrutura/navbar.php" ?>
+<?php include "../estrutura/website/header.php" ?>
+<?php include "../estrutura/website/navbar.php" ?>
 
 <body class="site">
     <nav class="navbar navbar-expand fixed-top">
@@ -64,7 +64,7 @@ $resultado = mysqli_query($link,$sql);
     </div>
 </section>
 </header>
-<?php include "../estrutura/footer.php" ?>
+<?php include "../estrutura/website/footer.php" ?>
 <style>
 body.site #footer {
     display: -webkit-box!important;
