@@ -1,10 +1,14 @@
 <?php include "../estrutura/website/header.php" ?>
 <?php include "../estrutura/website/navbar.php" ?>
 
+<?php 
+
+?>
 
 <?php 
 include "../../modal/conexao.php" ;
-$sql = "SELECT * FROM concurso";
+$id= $_GET['id'];
+$sql = "SELECT * FROM concurso where concurso_id='$id'";
 $resultado = mysqli_query($link,$sql); 
 ?>
 
@@ -17,15 +21,17 @@ $resultado = mysqli_query($link,$sql);
                 <div class="jumbotron">
                     <h1 class="display-5">Concorrente: <?php echo "" .$_SESSION['Logado'];?></h1>
                     <hr>
-                    <b>Referencia:</b> 
+					<?php while($com = mysqli_fetch_array($resultado)){ ?>
+                    <b>Referencia:</b> <?php echo $com['referencia']; ?>
                     <hr>
-                    <b>Concurso:</b> Material de escritorio
+                    <b>Concurso:</b> <?php echo $com['designacao']; ?>
                     <hr>
-                    <b>Modalidade:</b> Concurso publico
+                    <b>Modalidade:</b><?php echo $com['modalidade']; ?>
                     <hr>
-                    <b>Descricao:</b> Aquisicao de material de escritorio para IMOVISA, com taxas atractivas.
+                    <b>Descricao:</b><?php echo $com['descricao']; ?>.
+					<?php } ?>
                     <hr>
-                        <a class="btn btn-primary btn-lg" href="index2.php" role="button" onclick="alert('Candidatura submetida')">Confirmar</a>
+                        <a class="btn btn-primary btn-lg" role="button"  href="../../controller/concorrer.php?id=<?php echo $id;?>">Confirmar</a>
                     </p>
                 </div> 
         </div>

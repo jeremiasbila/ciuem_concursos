@@ -36,7 +36,7 @@ $resultado = mysqli_query($link,$sql);
                             <td><?php echo $dados['aquisicao']; ?></td>
                             <td><button type="button" class="btn btn-success btn-sm " data-toggle="modal" data-target="#myModal">Ver</button></td>
                             <td><a href=""><button type="button" onclick="myFunction()"class="btn btn-success btn-sm">Imprimir</button></a></td>
-                            <td><a href="concorrer.php"><button type="button" class="btn btn-success btn-sm">Concorrer</button></a></td>
+                            <td><a href="concorrer.php?id=<?php echo $dados['concurso_id']; ?>"><button type="button" class="btn btn-success btn-sm">Concorrer</button></a></td>
                             </tr>
                           <?php } ?>
                         </tr>
