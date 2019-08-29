@@ -3,12 +3,11 @@
 }
 .navbar-brand{
     font-weight:600;
-    color: white!important;
+  color: yellow!important;
     font-size: 23px
+    font-family:cursive;
 }
-i{
-    color: white!important;
-}
+
 
 .login_name{
 	    color: beige;
@@ -361,7 +360,8 @@ section.publico{
 
 /* Estilo para card dos formularios */
 .card-header{
-	background-color: #E9ECEF!important;
+	background-color: #087f61!important;
+	color: #FFF!important;
 }
 
 .btn-success {

@@ -26,7 +26,7 @@
     background-size: 100%!important;">
      <nav class="navbar navbar-expand fixed-top">
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
-    <i class="fas fa-bars"></i>
+   
     </button>
     <a class="navbar-brand mr-1" href="../../view/website/">Concursos</a>
 
@@ -75,7 +75,7 @@
             <div class="form-row">
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="text" id="nrCadastro" name="nrCadastro" class="form-control" placeholder="Numero de cadastro unico" required="required" autofocus="autofocus">
+                  <input type="number" id="nrCadastro" name="nrCadastro" class="form-control" placeholder="Numero de cadastro unico" required="required" autofocus="autofocus">
                   <label for="nrCadastro">Numero de cadastro unico</label>
                 </div>
               </div>
@@ -156,7 +156,7 @@
               </div>
               <div class="col-md-6">
                   <div class="form-label-group">
-                      <input type="text" id="conctacto" name="contacto" class="form-control" placeholder="Conctacto" required="required">
+                      <input type="number" id="conctacto" name="contacto" class="form-control" placeholder="Conctacto" required="required">
                       <label for="conctacto">Conctacto</label>
                   </div>
               </div>
@@ -165,7 +165,7 @@
 
             <div class="form-group">
                   <div class="form-label-group">
-                      <input type="text" id="nuit" name="nuit" class="form-control" placeholder="NUIT" required="required">
+                      <input type="number" id="nuit" name="nuit" class="form-control" placeholder="NUIT" required="required">
                       <label for="nuit">NUIT</label>
                   </div>
             </div>
@@ -181,6 +181,12 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
+  <style type="text/css">
+    .card-header{
+  background-color: #087f61!important;
+  color: #FFF!important;
+}
+  </style>
   <script src="../../vendor/jquery/jquery.min.js"></script>
   <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

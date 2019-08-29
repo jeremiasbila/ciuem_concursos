@@ -33,7 +33,7 @@
     background-size: 100%!important;">
     <nav class="navbar navbar-expand fixed-top">
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
-    <i class="fas fa-bars"></i>
+   
     </button>
       <a class="navbar-brand mr-1" href="../../view/website/">Concursos</a>
 
@@ -77,7 +77,7 @@
         <form  action="../../controller/autenticacao.php" method="post">
           <div class="form-group">
             <div class="form-label-group">
-              <input type="text" name="nome" id="nome" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
+              <input type="text" name="nome" id="nome" class="form-control" placeholder="n" required="required" autofocus="autofocus">
               <label for="inputEmail">Nome</label>
             </div>
           </div>
@@ -112,6 +112,10 @@
      .container{
           padding-top: 40px;
      }
+     .card-header{
+  background-color: #087f61!important;
+  color: #FFF!important;
+}
    </style>
   <!-- Core plugin JavaScript-->
   <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
