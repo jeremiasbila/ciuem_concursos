@@ -4,9 +4,9 @@
 <body class="site">
     <nav class="navbar navbar-expand fixed-top">
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
-   
+
     </button>
-    <a class="navbar-brand mr-1" href="http://localhost/concursos/view/website">Concursos</a>
+    <a class="navbar-brand mr-1" href="../../view/website/">Concursos</a>
 
     <!-- Navbar -->
     <ul class="navbar-nav ml-auto ml-md-50 login_name">
@@ -17,7 +17,7 @@
             if(isset($_SESSION['Logado'])){
                 echo ''. $_SESSION['Logado'].'<br/>';?>
         <li>
-            <a href="../../controller/logout.php?Logout"><button type="button" class="btn btn-outline-warning btn-2">Sair</button></a>
+            <a href="../../controller/logout.php?Logout"><button type="button" class="btn btn-link btn-2">(Sair)</button></a>
             
         </li>
         

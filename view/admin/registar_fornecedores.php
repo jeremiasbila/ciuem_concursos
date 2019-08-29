@@ -14,7 +14,7 @@
     $nrCadastro = $_POST['nrCadastro'];
     $nome = $_POST['nome'];
     $email = $_POST['email'];
-    $senha = md5($_POST['senha']);
+    $senha = ($_POST['senha']);
     $nacionalidade = $_POST['nacionalidade'];
     $tipoCorrente = $_POST['tipoCorrente'];
     $provincia = $_POST['provincia'];
