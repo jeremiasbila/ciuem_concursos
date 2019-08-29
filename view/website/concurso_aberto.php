@@ -79,8 +79,8 @@ body.site #footer {
     width:100%!important;
 }
 </style>
-<script>
+<!-- <script>
 function myFunction() {
   window.print();
 }
-</script>
+</script> -->
