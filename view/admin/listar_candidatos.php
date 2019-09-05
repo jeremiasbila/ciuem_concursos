@@ -1,6 +1,7 @@
 <?php include "../estrutura/admin/header.php" ?>
 <?php include "../estrutura/admin/sidebar.php" ?>
 <?php 
+
 include "../../modal/conexao.php" ;
 $sql = "SELECT * FROM candidatura INNER JOIN concurso ON candidatura.idConcursos = concurso.concurso_id INNER JOIN fornecedor ON candidatura.idFornecedores = fornecedor.idFornecedor";
 $resultado = mysqli_query($link,$sql); ?>
@@ -10,22 +11,23 @@ $resultado = mysqli_query($link,$sql); ?>
             <!-- Breadcrumbs-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="http://localhost/concursos/view/admin">Concursos</a>
+            <a href="http://localhost/concursos/view/admin"style=" color: #efff00;" >Concursos :</a>
           </li>
           <li class="breadcrumb-item active">listar candidatos</li>
         </ol>
 
-        <div id="content-wrapper">
+        <div id="content-wrapper" >
 
       <div class="container-fluid">
-            <div class="table-responsive">
+            <div class="table-responsive" >
                   <table class="table table-bordered">
-                  <thead class="thead-light">
+                  <thead class="thead-dark">
                         <tr>
                         <th >NOME</th>
                         <th>DESIGNACAO DO CONCURSO</th>
                         <th>DATA DE INICIO</th>
                         <th>DATA FINAL</th>
+                        <th>PRINT</th>
                         </tr>
                   </thead>
                   <tbody>
@@ -36,6 +38,7 @@ $resultado = mysqli_query($link,$sql); ?>
                             <td><?php echo $dados['designacao']; ?></td>
                             <td><?php echo $dados['dataInicio']; ?></td> 
                             <td><?php echo $dados['datafim']; ?></td> 
+                            <td><a href="pdf/invoice.php"type="button" class="btn btn-primary ">PDF</a></td>
                           </tr>
                           <?php } ?>
                         </tr>
@@ -47,4 +50,27 @@ $resultado = mysqli_query($link,$sql); ?>
 </div>   
 
       </div>  <!-- /.container-fluid -->
+      <style type="text/css">
+        .table .thead-dark th {
+    color: #fff;
+    background-color: #087f61!important;
+    border-color: #087f61!important;
+}
+      .breadcrumb {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-color: #087f61!important;
+    border-radius: 0.25rem;
+}
+
+.breadcrumb-item.active {
+    color: #ffffff!important;
+}
+      </style>
 <?php include "../estrutura/admin/footer.php"?>
