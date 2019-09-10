@@ -116,5 +116,11 @@
                 </div>
             </div>
         </div>
+        <div class="alert alert-success" role="alert">
+  This is a primary alert—check it out!
+</div>
+<div class="alert alert-danger" role="alert">
+  This is a secondary alert—check it out!
+</div>
     </section>
 <?php include "../estrutura/website/footer.php" ?>
