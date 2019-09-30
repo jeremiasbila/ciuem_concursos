@@ -106,7 +106,7 @@
                                         <h4><?php echo $dados["referencia"];?></h4>
                                         <hr>
                                         <p><?php echo $dados["descricao"];?></p>
-                                        <button type="button" class="btn btn-outline-warning btn-sm">Ver mais</button>
+                                        <button type="button" Onclick="<?php $sql = "SELECT * FROM concurso WHERE id=concurso.id";?>" class="btn btn-outline-warning btn-sm">Ver mais</button>
                                     </div>
                             </div>
                         </div>

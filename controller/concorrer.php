@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	
 	if(isset($_SESSION['Logado'])){
               $jj= $_SESSION['Logado'];
 			  echo $jj;
@@ -24,4 +25,6 @@
 		}
 		
 	}
- ?> 
+	
+
+  
