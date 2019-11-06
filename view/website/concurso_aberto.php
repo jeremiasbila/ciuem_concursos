@@ -34,6 +34,7 @@ $resultado = mysqli_query($link,$sql);
                             <td><?php echo $dados['designacao']; ?></td>
                             <td><?php echo $dados['modalidade']; ?></td>
                             <td><?php echo $dados['aquisicao']; ?></td>
+                            
                             <td><button type="button" class="btn btn-success btn-sm " data-toggle="modal" data-target="#myModal">Ver</button></td>
                             <td><a href=""><button type="button" onclick="myFunction()"class="btn btn-success btn-sm">Imprimir</button></a></td>
                             
