@@ -11,7 +11,7 @@ $resultado = mysqli_query($link,$sql); ?>
             <!-- Breadcrumbs-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="http://localhost/concursos/view/admin"style=" color: #efff00;" >Concursos :</a>
+            <a href="../../view/admin/"style=" color: #efff00;" >Concursos :</a>
           </li>
           <li class="breadcrumb-item active">listar candidatos</li>
         </ol>
@@ -38,7 +38,7 @@ $resultado = mysqli_query($link,$sql); ?>
                             <td><?php echo $dados['designacao']; ?></td>
                             <td><?php echo $dados['dataInicio']; ?></td> 
                             <td><?php echo $dados['datafim']; ?></td> 
-                            <td><a href="pdf/invoice.php"type="button" class="btn btn-primary ">PDF</a></td>
+                            <td><a href="pdf/invoice.php" type="button" class="btn btn-primary ">PDF</a></td>
                           </tr>
                           <?php } ?>
                         </tr>

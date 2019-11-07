@@ -1,5 +1,6 @@
 <?php 
-	session_start();
+  session_start();
+  
 ?>
 <html lang="en">
 <head>
@@ -26,7 +27,7 @@
 
   <nav class="navbar navbar-expand static-top">
 
-    <a class="navbar-brand mr-1" href="index.html">Concursos</a>
+    <a class="navbar-brand mr-1" href="../../view/website/">Concursos</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       
@@ -35,15 +36,16 @@
     <!-- Navbar Search -->
     <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" method="post">
       <div class="input-group">
-        <input  name="valueToSearch" type="text" class="form-control" placeholder="Pesquisar..." aria-label="Search" aria-describedby="basic-addon2">
+        <input  name="valueToSearch" id="pesquisar" type="text" class="form-control" placeholder="Pesquisar..." aria-label="Search" aria-describedby="basic-addon2">
         <div class="input-group-append">
           <button class="btn btn-primary" type="button" id="btnPesquisar">
-            <i class="fas fa-search"></i>
+            <i class="fas fa-search" id="Search"></i>
           </button>
+         
 		  <div> 
       <?php 
 			if(isset($_SESSION['Logado'])){
-				echo 'Bem Vindo ao sistema '. $_SESSION['Logado'].'<br/>';
+				echo '  Bem Vindo '. $_SESSION['Logado'].'<br/>';
 		
 			}
 			?></div>
@@ -53,26 +55,10 @@
 
     <!-- Navbar -->
     <ul class="navbar-nav ml-auto ml-md-0">
-      <li class="nav-item dropdown no-arrow mx-1">
-        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-bell fa-fw"></i>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
-          <a class="dropdown-item" href="#">Notificacao 1</a>
-          <a class="dropdown-item" href="#">Notificacao 2</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown no-arrow">
-        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-user-circle fa-fw"></i>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-          <a class="dropdown-item" href="#">Perfil</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="../../controller/logout.php?Logout" data-toggle="modal" data-target="#logoutModal">Sair</a>
-        </div>
-      </li>
-	  
+      
+	   <?php 
+        echo '<a href="../../controller/logout.php?Logout" >Sair</a>';
+      ?>
 	 
     </ul>
   </nav>
