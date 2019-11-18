@@ -11,7 +11,7 @@ $resultado = mysqli_query($link,$sql);
             <!-- Breadcrumbs-->
             <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                  <a href="http://localhost/concursos/view/admin">Concursos</a>
+                  <a href="../../view/admin/">Concursos</a>
             </li>
             <li class="breadcrumb-item active">Listar concursos</li>
             </ol>
@@ -37,11 +37,15 @@ $resultado = mysqli_query($link,$sql);
                             <td><?php echo $dados['modalidade']; ?></td>
                             <td><?php echo $dados['aquisicao']; ?></td>
                             <td ><input type="checkbox" id="publicar" onclick="alert('Tem certeza que deseja publicar este concurso?')"></td>
+
                             
 
                             <td><button type="button" class="btn btn-success btn-sm " data-toggle="modal" data-target="#myModal">Ver</button></td>
-                            <td><a href=""><button type="button" onclick="myFunction()"class="btn btn-success btn-sm">Imprimir</button></a></td>
+                            <td><a href="pdf/invoice.php"><button type="button" onclick="myFunction()"class="btn btn-success btn-sm">Imprimir</button></a></td>
                             
+
+                            
+
                             </tr>
                           <?php } ?>
                         </tr>

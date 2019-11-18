@@ -105,22 +105,24 @@
                                     <div class="col-lg-10">
                                         <h4><?php echo $dados["referencia"];?></h4>
                                         <hr>
-                                        <p><?php echo $dados["descricao"];?></p>
-                                        <button type="button" Onclick="<?php $sql = "SELECT * FROM concurso WHERE id=concurso.id";?>" class="btn btn-outline-warning btn-sm">Ver mais</button>
+                                        <h5><p><?php echo $dados["descricao"];?></p></h5>
+                                       <a href="id=<?php echo $dados['id']; ?>"></a> <button type="button"  data-toggle="collapse" data-target="#demo1"  class="btn btn-outline-warning btn-sm">Ver mais</button></a>
+                       
+                                          <div id="demo1" class="collapse">
+                                               <h5><li>Referencia:<?php echo $dados['referencia']; ?></li></h5> 
+                                               <h5><li>Designacao:<?php echo $dados['designacao']; ?></li></h5>
+                                                <h5><li>Modalidade:<?php echo $dados['modalidade']; ?></li></h5>
+                                                <h5><li>Aquisicao:<?php echo $dados['aquisicao']; ?></li></h5>
+                                          </div>
                                     </div>
                             </div>
                         </div>
                         </div>
-                    <?php }?>  
+                    <?php }?>   
                    
                 </div>
             </div>
         </div>
-        <div class="alert alert-success" role="alert">
-  This is a primary alert—check it out!
-</div>
-<div class="alert alert-danger" role="alert">
-  This is a secondary alert—check it out!
-</div>
+      
     </section>
 <?php include "../estrutura/website/footer.php" ?>
