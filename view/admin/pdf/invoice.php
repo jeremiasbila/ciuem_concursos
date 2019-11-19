@@ -26,7 +26,7 @@
 
   $query=mysqli_query($con,"SELECT * FROM concurso");
 
-  while ($data=mysqli_fetch_array($query)) {
+  while ($con=mysqli_fetch_array($query)) {
 
    $pdf->Cell(50,5,$data['referencia'],1,0);
   $pdf->Cell(85,5,$data['designacao'],1,0);

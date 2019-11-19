@@ -31,6 +31,7 @@ $resultado = mysqli_query($link,$sql); ?>
                         </tr>
                   </thead>
                   <tbody>
+                    
                         <tr>
                         <?php while($dados = mysqli_fetch_array($resultado)){ ?>
                           <tr>
@@ -38,7 +39,7 @@ $resultado = mysqli_query($link,$sql); ?>
                             <td><?php echo $dados['designacao']; ?></td>
                             <td><?php echo $dados['dataInicio']; ?></td> 
                             <td><?php echo $dados['datafim']; ?></td> 
-                            <td><a href="pdf/invoice.php" type="button" class="btn btn-primary ">PDF</a></td>
+                            <td><a href="print2.php?id=<?php  echo $dados['concurso_id']; ?>"><button  type="button" class="btn btn-success btn-sm">Imprimir</button></a></td>
                           </tr>
                           <?php } ?>
                         </tr>

@@ -19,7 +19,7 @@ $resultado = mysqli_query($link,$sql);
             <h3>Concorrer </h3>
                 <hr class="my-4"/>
                 <div class="jumbotron">
-                    <h1 class="display-5">Concorrente: <?php if (!isset($_SESSION['Logado'])) {header('location: http://localhost/ciuem_concursos/view/autenticacao/login.php');exit();}elseif (isset($_SESSION['Logado'])) { echo "" .$_SESSION['Logado'];}?></h1>
+                    <h1 class="display-5">Concorrente: <?php if (!isset($_SESSION['Logado'])) {header('location: ../../view/autenticacao/login.php');exit();}elseif (isset($_SESSION['Logado'])) { echo "" .$_SESSION['Logado'];}?></h1>
                     <hr>
 					<?php while($com = mysqli_fetch_array($resultado)){ ?>
                     <b>Referencia:</b> <?php echo $com['referencia']; ?>
