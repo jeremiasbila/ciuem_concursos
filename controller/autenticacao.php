@@ -23,9 +23,10 @@ include "../modal/conexao.php" ;
 				$_SESSION['Logado']=$_POST['nome'];
 				header("location:../view/website/index.php?login=ok");
 			}}elseif(!isset($_POST['Login'])){
-				
+
 				header("location:../view/autenticacao/login.php?login=erro");
 			}
+
 		
 
 			
