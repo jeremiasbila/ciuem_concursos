@@ -43,12 +43,7 @@
           </button>
          
 		  <div> 
-      <?php 
-			if(isset($_SESSION['Logado'])){
-				echo '  Bem Vindo '. $_SESSION['Logado'].'<br/>';
-		
-			}
-			?></div>
+</div>
         </div>
       </div>
     </form>
@@ -56,9 +51,7 @@
     <!-- Navbar -->
     <ul class="navbar-nav ml-auto ml-md-0">
       
-	   <?php 
-        echo '<a href="../../controller/logout.php?Logout" >Sair</a>';
-      ?>
+	  
 	 
     </ul>
   </nav>

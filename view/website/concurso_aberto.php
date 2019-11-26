@@ -35,7 +35,8 @@ $resultado = mysqli_query($link,$sql);
                             <td><?php echo $dados['modalidade']; ?></td>
                             <td><?php echo $dados['aquisicao']; ?></td>
                             
-                            <td><button type="button" class="btn btn-success btn-sm " data-toggle="modal" data-target="#myModal">Ver</button></td>
+                            <td><a href="print.php?id=<?php  echo $dados['concurso_id']; ?>"><a type="button" class="btn btn-success btn-sm " data-toggle="modal" data-target="#myModal">Ver</a></button></td>
+
                             <td><a href="pdf/invoice.php"><button type="button" onclick="myFunction()"class="btn btn-success btn-sm">Imprimir</button></a></td>
                             
                             <td><a href="concorrer.php?id=<?php  echo $dados['concurso_id']; ?>"><button  type="button" class="btn btn-success btn-sm">Concorrer</button></a></td>
@@ -82,8 +83,43 @@ body.site #footer {
     width:100%!important;
 }
 </style>
-<!-- <script>
+<!--
 function myFunction() {
   window.print();
 }
-</script> -->
+ -->
+
+<script>
+function buscarParaEditar(data){
+$.ajax({
+type:'post',
+url: '../../Controller/projectoController.php',
+dataType: 'JSON',
+cache: false,
+data:{
+'_token':$('input[name=_token]').val(),
+'id':data,
+'buscarparaeditar' :1
+},
+success:function(data){
+document.getElementById("idp").value=data[0].id;
+document.getElementById("nome").value=data[0].nome;
+document.getElementById("objectivo").value=data[0].objectivo;
+document.getElementById("detalhes").value=data[0].detalhes;
+document.getElementById("descricao").value=data[0].descricao;
+$('#modaleditar').modal('show');
+console.log(data);
+
+console.log(data[0].nome);
+
+
+},
+error:function (data) {
+console.log(data);
+alert("Erro ao tentar registar, tente novamente");
+
+}
+});
+
+}
+</script>

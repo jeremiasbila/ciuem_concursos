@@ -77,8 +77,8 @@
         <form  action="../../controller/autenticacao.php" method="post">
           <div class="form-group">
             <div class="form-label-group">
-              <input type="text" name="nome" id="nome" class="form-control" placeholder="nome" required="required" autofocus="autofocus">
-              <label for="inputEmail">Nome</label>
+              <input type="text" name="email" id="email" class="form-control" placeholder="Email" required="required" autofocus="autofocus">
+              <label for="inputEmail">Email</label>
             </div>
           </div>
           <div class="form-group">

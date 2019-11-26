@@ -22,11 +22,12 @@
 
     $string_sql = "INSERT INTO `concurso`(`concurso_id`, `modalidade`, `referencia`, `designacao`, `aquisicao`, `dataInicio`, `datafim`, `descricao`, `ficheiro`) VALUES (null,'".$modalidade."','".$referencia."','".$designacao."','".$aquisicao."','".$dataInicio."','".$dataFim."','".$descricao."',null)";
      
+
     if ($conn->query($string_sql) === TRUE) {
-        header("Location:cadastrar_concursos.php");
+    header("Location:listar_concursos.php");
     } else {
-        echo "Error: " . $string_sql . "<br>" . $conn->error;
+    echo "Error: " . $string_sql . "<br>" . $conn->error;
     }
-    
+
     $conn->close();
-?>
+    ?>

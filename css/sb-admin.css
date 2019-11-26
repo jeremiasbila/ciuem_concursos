@@ -5137,14 +5137,22 @@ input[type="button"].btn-block {
 .accordion > .card .card-header {
   margin-bottom: -1px;
 }
-
+li#addconcurso{
+  background-color: #dee2e6;
+  margin: -24px 1075px;
+  position: absolute;
+  padding: 12px 12px;
+  color: white;
+  font-weight: bold;
+  border-radius: 25px 0px 0px 25px;
+}
 .breadcrumb {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 0.75rem 1rem;
+  padding:24px 1rem;
   margin-bottom: 1rem;
   list-style: none;
   background-color: #087f61;
