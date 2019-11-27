@@ -35,7 +35,7 @@ $resultado = mysqli_query($link,$sql);
                     <hr>
 					<?php } ?>
                     <hr>
-                        <a href="invoice.php?id=<?php  echo $dados['concurso_id']; ?>" class="btn btn-primary btn-lg">Imprimir</a>
+                        <a class="btn btn-primary btn-lg" onclick="myFunction()">Imprimir</a>
                        
                     </p>
                 </div> 

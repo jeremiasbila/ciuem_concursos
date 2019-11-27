@@ -34,6 +34,11 @@ $resultado = mysqli_query($link,$sql);
     </div>
 </section>
 </header>
+<script>
+function myFunction() {
+  window.print();
+}
+</script>
 
 
 
