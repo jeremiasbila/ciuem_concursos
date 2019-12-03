@@ -1,4 +1,4 @@
-<?php 
+<?php
 	session_start();
 	if(isset($_SESSION['Logado'])){
 		header("location:../../view/admin/index.php");
@@ -19,7 +19,7 @@
 
   <!--Call my CSS-->
   <link href="../../css/app.css" rel="stylesheet" type="text/css">
-      
+
   <!-- Custom fonts for this template-->
   <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
@@ -33,7 +33,7 @@
     background-size: 100%!important;">
     <nav class="navbar navbar-expand fixed-top">
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
-   
+
     </button>
       <a class="navbar-brand mr-1" href="../../view/website/">Concursos</a>
 
@@ -51,18 +51,18 @@
         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Sair</a>
         </div>
     </li> -->
-    <?php 
+    <?php
             if(isset($_SESSION['Logado'])){
                 echo ''. $_SESSION['Logado'].'<br/>';?>
         <li>
             <a href="../../controller/logout.php?Logout"><button type="button" class="btn btn-outline-warning">Entrar</button></a>
-            
+
         </li>
-        
+
     <?php } else { ?>
 
         <li>
-           
+
             <a href="../autenticacao/registar.php"><button type="button" class="btn btn-outline-warning">Cadastre-se</button></a>
         </li>
 
@@ -77,13 +77,15 @@
         <form  action="../../controller/autenticacao.php" method="post">
           <div class="form-group">
             <div class="form-label-group">
-                <input type="text" name="nome" id="nome" class="form-control" placeholder="name" required="required" autofocus="autofocus">
-                <label for="inputEmail">Name</label>
+
+                <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome" required="required" autofocus="autofocus">
+                <label for="inputName">Nome</label>
+
             </div>
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required="required">
+              <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Senha" required="required">
               <label for="inputPassword">Senha</label>
             </div>
           </div>
@@ -119,7 +121,7 @@
    </style>
   <!-- Core plugin JavaScript-->
   <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
- 	
+
 
 </body>
 </html>

@@ -25,7 +25,8 @@ $resultado = mysqli_query($link,$sql);
                             <th>Aquisicao</th>
                             <th>Publicar</th>
                             <th>Items</th>
-                              <th>Imprimir</th>
+                              <th>Editar</th>
+                                <th>Remover</th>
                         
                             </tr>
                         </thead>
@@ -40,7 +41,7 @@ $resultado = mysqli_query($link,$sql);
                             <td ><input type="checkbox" id="publicar" onclick="alert('Tem certeza que deseja publicar este concurso?')"></td>
                             <td><a href="print.php?id=<?php  echo $dados['concurso_id']; ?>"><button type="button" class="btn btn-success btn-sm">Ver</button></a></td>
                             <td><a href="edit.php?id=<?php  echo $dados['concurso_id']; ?>"><button  type="button" class="btn btn-success btn-sm">editar</button></a></td>
-                            <td><a href="apagar.php?id=<?php  echo $dados['concurso_id']; ?>"><button  type="button" class="btn btn-success btn-sm">apagar</button></a></td>
+                            <td><a href="apagar.php?id=<?php  echo $dados['concurso_id']; ?>"><button  type="button" class="btn btn-success btn-sm">Remover</button></a></td>
                         </tr>
                           <?php } ?>
                         </tr>
