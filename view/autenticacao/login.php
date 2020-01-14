@@ -72,7 +72,7 @@
 
   <div class="container">
     <div class="card card-login mx-auto mt-5">
-      <div class="card-header" style="font-size:20px!important;">Iniciar sess&atildeo </div>
+      <div class="card-header" style="font-size:20px!important;">Iniciar sessão</div>
       <div class="card-body">
         <form  action="../../controller/autenticacao.php" method="post">
           <div class="form-group">
@@ -85,7 +85,7 @@
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Senha" required="required">
+              <input type="password" name="senha" id="inputPassword" class="form-control" placeholder="Senha" required="required">
               <label for="inputPassword">Senha</label>
             </div>
           </div>
