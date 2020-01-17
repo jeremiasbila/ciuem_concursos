@@ -40,6 +40,15 @@ function myFunction() {
   window.print();
 }
 </script>
+<style type="text/css">
+    body.site section#footer {
+    padding: 86px;
+}
+body.site #footer {
+    background: #087F61 !important;
+    height: 196px!important;
+}
+</style>
 
 
 

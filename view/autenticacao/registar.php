@@ -173,7 +173,7 @@
         </form>
           <div class="text-center">
             <a class="d-block small mt-3" href="login.php" style="color:#EECE00!important;">Iniciar sess&atildeo</a>
-            <a class="d-block small" href="esqueceu-senha.php" style="color:#EECE00!important;">Esqueceu senha?</a>
+          <!--  <a class="d-block small" href="esqueceu-senha.php" style="color:#EECE00!important;">Esqueceu senha?</a>-->
           </div>
         </div>
       </div>

@@ -75,20 +75,19 @@
       <div class="card-header" style="font-size:20px!important;">Iniciar sess&atildeo </div>
       <div class="card-body">
         <form  action="../../controller/autenticacao.php" method="post">
+           <div class="form-group">
+          <div class="form-label-group">
+                  <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome" required="required" >
+                  <label for="nome">Nome proprio</label>
+                </div>
+              </div>
           <div class="form-group">
             <div class="form-label-group">
-
-                <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome" required="required" autofocus="autofocus">
-                <label for="inputName">Nome</label>
-
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="form-label-group">
-              <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Senha" required="required">
+              <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Senha" required="required" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
               <label for="inputPassword">Senha</label>
             </div>
           </div>
+
           <div class="form-group">
             <div class="checkbox">
               <label>
@@ -101,7 +100,7 @@
         </form>
         <div class="text-center">
           <a class="d-block small mt-3" href="registar.php" style="color:#EECE00!important;">Criar conta</a>
-          <a class="d-block small" href="esqueceu-senha.php" style="color:#EECE00!important;">Esqueceu a senha?</a>
+        <!--  <a class="d-block small" href="esqueceu-senha.php" style="color:#EECE00!important;">Esqueceu a senha?</a>-->
         </div>
       </div>
     </div>
@@ -110,6 +109,7 @@
   <!-- Bootstrap core JavaScript-->
   <script src="../../vendor/jquery/jquery.min.js"></script>
   <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
    <style type="text/css">
      .container{
           padding-top: 40px;
