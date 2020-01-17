@@ -72,7 +72,7 @@
 
   <div class="container">
     <div class="card card-login mx-auto mt-5">
-      <div class="card-header" style="font-size:20px!important;">Iniciar sess&atildeo </div>
+      <div class="card-header" style="font-size:20px!important;">Iniciar sessão</div>
       <div class="card-body">
         <form  action="../../controller/autenticacao.php" method="post">
            <div class="form-group">
@@ -83,7 +83,19 @@
               </div>
           <div class="form-group">
             <div class="form-label-group">
+<<<<<<< HEAD
               <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Senha" required="required" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
+=======
+
+                <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome" required="required" autofocus="autofocus">
+                <label for="inputName">Nome</label>
+
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input type="password" name="senha" id="inputPassword" class="form-control" placeholder="Senha" required="required">
+>>>>>>> 5bd7d2e2d12d5cfec81a38d2b4e4a7b885615563
               <label for="inputPassword">Senha</label>
             </div>
           </div>

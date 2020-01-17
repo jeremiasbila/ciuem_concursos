@@ -1,19 +1,19 @@
-<?php 
-session_start(); 
+<?php
+session_start();
 include "../modal/conexao.php" ;
 
 
-		if(empty($_POST['nome'])||empty($_POST['inputPassword']))
+		if(empty($_POST['nome'])||empty($_POST['senha']))
 		{
-			
+
 			header("location:../view/autenticacao/login.php?Empty= Esta em branco!");
-			
-			 
+
+
 		}
 
 	if(isset($_POST['Login']))
-	{ 
-		$sql = "SELECT * FROM fornecedor where nome='".$_POST['nome']."' and senha='".$_POST['inputPassword']."' and estado=1";
+	{
+		$sql = "SELECT * FROM fornecedor where nome='".$_POST['nome']."' and senha='".$_POST['senha']."' and estado=1";
 		$resultado = mysqli_query($link,$sql);
 
 		  if(mysqli_fetch_assoc($resultado)){
@@ -27,14 +27,7 @@ include "../modal/conexao.php" ;
 				header("location:../view/autenticacao/login.php?login=erro");
 			}
 
-		
-
-			
-
-				
-		
-		
+	?>
 
 
 
-Z?>
