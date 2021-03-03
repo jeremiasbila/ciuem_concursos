@@ -5,8 +5,14 @@
 # For a better and more suitable instances subscription is required
 
 trigger:
-- master
-- pilot
+  batch: true
+  branches:
+    include: 
+    - master
+    - pilot/* 
+    exclude:
+      - pilot/old*
+      #if it's needed include feature her! 
 
 pool:
   vmImage: ubuntu-latest
